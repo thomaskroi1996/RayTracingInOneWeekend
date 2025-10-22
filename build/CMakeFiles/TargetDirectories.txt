@@ -1,0 +1,3 @@
+/home/thk/coding/ray_tracing_iow/build/CMakeFiles/inOneWeekend.dir
+/home/thk/coding/ray_tracing_iow/build/CMakeFiles/edit_cache.dir
+/home/thk/coding/ray_tracing_iow/build/CMakeFiles/rebuild_cache.dir
