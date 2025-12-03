@@ -1,7 +1,7 @@
 #include <cmath>
 #include "sphere.hh"
 
-bool sphere::hit(const ray &r, double ray_tmin, double ray_tmax, hit_record &rec) const
+bool sphere::hit(const ray &r, interval ray_t, hit_record &rec) const
 {
     auto oc = center - r.origin();
     auto a = r.direction().length_squared();
@@ -16,10 +16,10 @@ bool sphere::hit(const ray &r, double ray_tmin, double ray_tmax, hit_record &rec
 
     // find nearest root in the acceptable range of ray_tmin to ray_tmax
     auto root = (h - sqrt_discriminant) / a;
-    if (root <= ray_tmin || ray_tmax <= root)
+    if (!ray_t.surrounds(root))
     {
         root = (h + sqrt_discriminant) / a;
-        if (root <= ray_tmin || ray_tmax <= root)
+        if (!ray_t.surrounds(root))
         {
             return false;
         }

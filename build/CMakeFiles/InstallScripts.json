@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/thk/coding/ray_tracing_iow/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

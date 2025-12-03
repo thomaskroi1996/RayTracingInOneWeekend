@@ -24,9 +24,9 @@ inline double degrees_to_radians(double degrees)
 }
 
 // Common Headers
-
 #include "vec3.hh"
 #include "color.hh"
 #include "ray.hh"
+#include "interval.hh"
 
 #endif
